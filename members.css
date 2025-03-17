@@ -1,0 +1,91 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+}
+
+/* Navbar list styling */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar links styling with Raleway */
+.navbar a {
+    text-decoration: none;
+    color: #d4edda;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fancy hover effect with a glowing border */
+.navbar a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #a777e3;
+    transition: width 0.4s ease-in-out;
+}
+
+/* Navbar hover effect */
+.navbar a:hover {
+    color: #6e8efb;
+    text-shadow: 0 0 10px #6e8efb, 0 0 20px rgba(110, 142, 251, 0.8);
+}
+
+/* Expand underline on hover */
+.navbar a:hover::before {
+    width: 100%;
+}
+
+/* Active page link styling */
+.navbar a.active {
+    color: #fff;
+    text-shadow: 0 0 15px #fff;
+}
+
+/* Team content styling */
+.team-content {
+    padding-top: 70px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Responsive navbar adjustments */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar a {
+        padding: 5px 10px;
+    }
+}

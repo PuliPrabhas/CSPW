@@ -1,0 +1,133 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: #003366;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    background-color: #4caf50;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+/* Content styling */
+.conclusion-container {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Headings */
+h1 {
+    color: #003366;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #4caf50;
+    font-size: 1.8em;
+    margin-top: 10px;
+}
+
+/* Charts styling */
+.charts-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.chart-box {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+}
+
+/* Pie chart smaller size */
+.small-chart canvas {
+    max-width: 300px;
+    margin: auto;
+}
+
+/* Table styling */
+.results-table {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.results-table th,
+.results-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.results-table th {
+    background-color: #003366;
+    color: #fff;
+}
+
+.results-table td {
+    background-color: #f4f4f4;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+    nav a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .conclusion-container h1 {
+        font-size: 2rem;
+    }
+
+    .chart-box {
+        width: 100%;
+    }
+
+    .results-table {
+        width: 90%;
+    }
+}

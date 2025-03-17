@@ -1,0 +1,126 @@
+/* Basic body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #155724; /* Deep Green Navbar */
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Navbar list styling */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar links styling */
+.navbar a {
+    text-decoration: none;
+    color: #d4edda; /* Soft Mint Green Text */
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Cool hover underline effect */
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: #28a745; /* Vibrant Green Underline */
+    transition: width 0.4s ease-in-out;
+}
+
+/* Navbar hover effect */
+.navbar a:hover {
+    color: #28a745; /* Text changes to vibrant green */
+    text-shadow: 0 0 8px #28a745, 0 0 15px rgba(40, 167, 69, 0.8);
+}
+
+/* Expand underline on hover */
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* Active page link styling */
+.navbar a.active {
+    color: #fff;
+    text-shadow: 0 0 15px #fff;
+}
+
+/* Page content styling */
+.content {
+    padding-top: 70px; /* Push content below navbar */
+    text-align: center;
+    color: #155724;
+}
+
+/* Table styling */
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    background: #fff;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #155724;
+    color: #d4edda;
+}
+
+/* Highlight every alternate row */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Responsive navbar adjustments */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar a {
+        padding: 5px 10px;
+    }
+}
+h1{
+    margin-top: 49px;
+    text-align: center;
+    background-color: #15872f;
+    color: #000000;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}

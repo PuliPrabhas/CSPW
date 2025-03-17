@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="conclusion.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Conclusion</title>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="introduction.html">Introduction</a>
+        <a href="Abstract.html">Abstract</a>
+        <a href="Questionnaire.html">Questionnaire</a>
+        <a href="Survey.html">Survey Data</a>
+        <a href="Activity.html">Activity Log</a>
+        <a href="Pictures.html">Pictures</a>
+        <a href="Members.html">Members</a>
+        <a href="Conclusion.html" class="active">Conclusion</a>
+    </nav>
+
+    <!-- Conclusion Content -->
+    <div class="conclusion-container">
+        <h1>Conclusion</h1>
+
+        <p>
+            After carefully analyzing the survey results, we observed a significant shift in shopping preferences. 
+            Out of 50 participants, <b>22 people</b> prefer <span style="color: #4caf50; font-weight: bold;">online shopping</span> for its convenience and variety, 
+            while <b>28 people</b> still choose <span style="color: #ff7043; font-weight: bold;">offline shopping</span> for its hands-on experience and trust in physical stores. 
+        </p>
+        <!-- Charts Section -->
+        <div class="charts-container">
+            <div class="chart-box">
+                <h2>Shopping Preferences - Bar Graph</h2>
+                <canvas id="barChart"></canvas>
+            </div>
+
+            <div class="chart-box small-chart">
+                <h2>Shopping Preferences - Pie Chart</h2>
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Data Table -->
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Shopping Type</th>
+                    <th>Number of People</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Online Shopping</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>Offline Shopping</td>
+                    <td>28</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Final Takeaway:</h2>
+        <p>
+            While online shopping continues to rise, offline shopping remains an essential part of consumer behavior. 
+            The future lies in finding a hybrid approach that captures the best of both worlds — the convenience of online and the trust of offline.
+        </p>
+    </div>
+
+    <!-- Chart.js for Graphs -->
+    <script>
+        const data = {
+            labels: ['Online Shopping', 'Offline Shopping'],
+            datasets: [{
+                data: [22, 28],
+                backgroundColor: ['#4caf50', '#ff7043']
+            }]
+        };
+
+        // Bar Chart
+        new Chart(document.getElementById('barChart').getContext('2d'), {
+            type: 'bar',
+            data,
+            options: { responsive: true }
+        });
+
+        // Pie Chart
+        new Chart(document.getElementById('pieChart').getContext('2d'), {
+            type: 'pie',
+            data,
+            options: { responsive: true }
+        });
+    </script>
+
+</body>
+</html>

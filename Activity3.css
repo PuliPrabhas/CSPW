@@ -1,0 +1,184 @@
+/* ===== Basic Reset and Styling ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ===== Navbar Styling ===== */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: #1f3b73;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px ;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect on navbar */
+.navbar a:hover {
+    background-color: #4a74c9;
+    border-radius: 5px;
+    transform: translateY(-3px);
+}
+
+/* Active link style */
+.navbar a.active {
+    background-color: #4a74c9;
+    border-radius: 5px;
+}
+
+/* ===== Title & Subtitle Styling ===== */
+.title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #1f3b73;
+    text-transform: uppercase;
+}
+
+.subtitle a {
+    color: #4a74c9;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.subtitle a:hover {
+    color: #1f3b73;
+}
+
+/* ===== Table Styling ===== */
+.activity-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+/* Table headers */
+.activity-table th {
+    background-color: #1f3b73;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Table rows */
+.activity-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Zebra stripes for rows */
+.activity-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect on table rows */
+.activity-table tr:hover {
+    background-color: #eaf0ff;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+/* ===== Button Styling ===== */
+.button-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Previous button style */
+.prev-button {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+}
+
+/* Next button style */
+.next-button {
+    background-color: #5bc0de;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+}
+
+/* Button hover effects */
+.prev-button:hover {
+    background-color: #c9302c;
+    transform: translateY(-2px);
+}
+
+.next-button:hover {
+    background-color: #31b0d5;
+    transform: translateY(-2px);
+}
+
+/* ===== Table Row Animation ===== */
+.activity-table tr {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.8s ease-in-out forwards;
+}
+
+/* Keyframe animation for rows sliding in */
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Staggered row effect */
+.activity-table tr:nth-child(2) { animation-delay: 0.2s; }
+.activity-table tr:nth-child(3) { animation-delay: 0.4s; }
+.activity-table tr:nth-child(4) { animation-delay: 0.6s; }
+.activity-table tr:nth-child(5) { animation-delay: 0.8s; }
+.activity-table tr:nth-child(6) { animation-delay: 1s; }
+
+/* ===== Mobile Responsiveness ===== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .activity-table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

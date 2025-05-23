@@ -1,83 +1,30 @@
-/* Scrollbar Styling */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-}
-
-/* Form fade-in animation */
-form {
-  animation: fadeIn 1s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Navbar Glassmorphism fallback */
-nav {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-/* Input & Select field transitions */
-input,
-select,
-textarea {
-  transition: all 0.3s ease-in-out;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  border-color: #3b82f6; /* Tailwind blue-500 */
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
-}
-
-/* Responsive form box styling */
-.form-container {
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 12px;
-  padding: 2rem;
-  max-width: 600px;
-  margin: auto;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-/* Header styling */
-h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #1f2937; /* Tailwind gray-800 */
-}
-
-/* Placeholder style enhancement */
-::placeholder {
-  color: #9ca3af; /* Tailwind gray-400 */
-  font-style: italic;
-}
-
-/* Button hover effect (if added) */
-button:hover {
-  transform: scale(1.05);
-  transition: transform 0.2s ease-in-out;
-}
+ nav {
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.2);
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+    /* Container styling */
+    .content-container {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: auto;
+    }
+    /* Text styling */
+    .content-container h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1f2937; /* gray-800 */
+      margin-bottom: 1rem;
+    }
+    .content-container p {
+      color: #374151; /* gray-700 */
+      line-height: 1.75;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }

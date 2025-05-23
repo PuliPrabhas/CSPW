@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conclusion - Online vs Offline Shopping</title>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    /* Reset & base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: center;
+      background: rgba(0,0,0,0.6);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 1rem;
+      position: relative;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    nav a::after {
+      content: '';
+      display: block;
+      height: 3px;
+      background: #00ffea;
+      width: 0;
+      transition: width 0.4s;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    /* Main content */
+    .container {
+      flex: 1;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      animation: fadeIn 1s ease-in;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      color: #ffd369;
+      animation: slideInDown 0.8s ease-out;
+    }
+    /* Data table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      animation: fadeIn 1.2s ease-in;
+    }
+    table th, table td {
+      border: 1px solid #555;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    table th {
+      background: #333;
+    }
+    table tr:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+    /* Charts */
+    .charts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .chart-box {
+      background: rgba(0,0,0,0.5);
+      padding: 1rem;
+      border-radius: 10px;
+      flex: 1 1 400px;
+      animation: fadeIn 1.5s ease-in;
+    }
+    .chart-box canvas {
+      width: 100% !important;
+      height: auto !important;
+    }
+    /* Conclusion text */
+    .conclusion-text {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      background: rgba(0,0,0,0.4);
+      padding: 1.5rem;
+      border-radius: 8px;
+      animation: fadeIn 1.8s ease-in;
+    }
+    /* Animations */
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideInDown { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  </style>
+</head>
+<body>
+  <!-- Navbar with 9 pages -->
+  <nav>
+    <a href="index.html">Home</a>
+        <a href="introduction.html">Introduction</a>
+        <a href="Abstract.html">Abstract</a>
+        <a href="Questionnaire.html">Questionnaire</a>
+        <a href="Survey.html">Survey Data</a>
+        <a href="Activity.html">Activity Log</a>
+        <a href="Pictures.html">Pictures</a>
+        <a href="Members.html">Members</a>
+        <a href="Conclusion.html" class="active">Conclusion</a>
+  </nav>
+
+  <div class="container" id="conclusion">
+    <h1>Conclusion</h1>
+
+    <!-- Data Table -->
+    <table>
+      <thead>
+        <tr><th>Category</th><th>Number of People</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Total Respondents</td><td>50</td></tr>
+        <tr><td>Offline Shopping</td><td>30</td></tr>
+        <tr><td>Online Shopping</td><td>20</td></tr>
+        <tr><td>Amazon (Online)</td><td>6</td></tr>
+        <tr><td>Flipkart (Online)</td><td>7</td></tr>
+        <tr><td>Myntra (Online)</td><td>4</td></tr>
+        <tr><td>BLink It (Online)</td><td>2</td></tr>
+        <tr><td>Ajio (Online)</td><td>3</td></tr>
+        <tr><td>LOT (Offline)</td><td>6</td></tr>
+        <tr><td>CMR (Offline)</td><td>4</td></tr>
+        <tr><td>BNEW (Offline)</td><td>5</td></tr>
+        <tr><td>D-Mart (Offline)</td><td>3</td></tr>
+        <tr><td>Westside (Offline)</td><td>7</td></tr>
+        <tr><td>Madina (Offline)</td><td>3</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Charts -->
+    <div class="charts">
+      <div class="chart-box">
+        <canvas id="pieChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <canvas id="barChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Conclusion Paragraph -->
+    <div class="conclusion-text">
+      <p>Based on the survey of 50 respondents, 30 individuals preferred offline shopping while 20 chose online platforms. Flipkart emerged as the top choice online (7 respondents), and Westside led offline (7 respondents).</p>
+      <p>The data indicates a general preference for offline retail, likely owing to the tactile experience, product availability, and trust in traditional stores. Online shopping remains popular for its convenience, though dominated by a few major platforms. Offline channels are more diverse, with interest distributed across several stores.</p>
+      <p>These findings highlight that, despite the growing digital trend, brick-and-mortar shopping continues to hold strong relevance. Both modes have loyal user bases, underscoring the need for businesses to maintain a balanced omnichannel presence.</p>
+    </div>
+  </div>
+
+  <!-- Chart.js Setup -->
+  <script>
+    const labels = [
+      'Amazon', 'Flipkart', 'Myntra', 'BLink It', 'Ajio',
+      'LOT', 'CMR', 'BNEW', 'D-Mart', 'Westside', 'Madina'
+    ];
+    const data = [6, 7, 4, 2, 3, 6, 4, 5, 3, 7, 3];
+
+    // Pie Chart
+    new Chart(document.getElementById('pieChart'), {
+      type: 'pie',
+      data: {
+        labels,
+        datasets: [{ data, hoverOffset: 8 }]
+      },
+      options: { animation: { animateRotate: true, duration: 1500 } }
+    });
+
+    // Bar Chart
+    new Chart(document.getElementById('barChart'), {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [{ label: 'Number of People', data, borderWidth: 1 }]
+      },
+      options: {
+        indexAxis: 'y',
+        scales: { x: { beginAtZero: true } },
+        animation: { duration: 1500 }
+      }
+    });
+  </script>
+</body>
+</html>

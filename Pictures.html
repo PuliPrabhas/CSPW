@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gallery.css">
+    <title>Project Gallery</title>
+    <style>
+        
+/* Reset Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Navbar Links */
+.navbar a {
+    color: #e5e7eb;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+/* Navbar Hover Effects */
+.navbar a:hover {
+    color: #0f172a;
+    background: linear-gradient(45deg, #00c9ff, #92fe9d);
+    border-radius: 20px;
+    transform: scale(1.1);
+}
+
+/* Active Page Highlight */
+.navbar .active {
+    background: linear-gradient(45deg, #f39c12, #f1c40f);
+    color: #0f172a;
+    border-radius: 20px;
+}
+
+/* Gallery Header Styling */
+.gallery-header {
+    text-align: center;
+    padding: 40px 10px;
+}
+
+.gallery-header h1 {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #f39c12, #f1c40f, #00c9ff);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+}
+
+.gallery-header p {
+    font-size: 1.2rem;
+    color: #e5e7eb;
+    opacity: 0.8;
+}
+
+/* Gallery Grid Styling */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Gallery Item Styling */
+.gallery-item {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+/* Gallery Image Styling */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Image Hover Effects */
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.6);
+}
+
+.gallery-item:hover img {
+    filter: brightness(1.2) saturate(1.3);
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .navbar a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .gallery-header h1 {
+        font-size: 2rem;
+    }
+
+    .gallery-header p {
+        font-size: 1rem;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="introduction.html">Introduction</a>
+        <a href="Abstract.html">Abstract</a>
+        <a href="Questionnaire.html">Questionnaire</a>
+        <a href="Survey.html">Survey Data</a>
+        <a href="Activity.html">Activity Log</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="Members.html">Members</a>
+        <a href="Conclusion.html">Conclusion</a>
+    </nav>
+
+    <!-- Gallery Header -->
+    <div class="gallery-header">
+        <h1>Image Showcase</h1>
+        <p>Survey Photos</p>
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="gallery-container">
+        <div class="gallery-item"><img src="Picture1.jpg" alt="Project Image 1"></div>
+        <div class="gallery-item"><img src="Picture2.jpg" alt="Project Image 2"></div>
+        <div class="gallery-item"><img src="Picture3.jpg" alt="Project Image 3"></div>
+        <div class="gallery-item"><img src="Picture4.jpg" alt="Project Image 4"></div>
+    </div>
+
+</body>
+</html>

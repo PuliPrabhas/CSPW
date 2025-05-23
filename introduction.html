@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Introduction</title>
+  <style>
+    /* Reset & variables */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --nav-height: 70px;
+      --glass-bg: rgba(255,255,255,0.2);
+      --glass-border: rgba(255,255,255,0.3);
+      --accent: #1100ff;
+      --text-light: #f0f0f0;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background:
+        linear-gradient(to bottom right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url(samplebg.jpg) center/cover repeat;
+      color: var(--text-light);
+      min-height: 100vh;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-height);
+      display: flex; justify-content: center; align-items: center;
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--glass-border);
+      z-index: 1000;
+      transition: height 0.3s ease;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul li a {
+      position: relative;
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--text-light);
+      padding: 0.5rem 0;
+      transition: color 0.3s ease;
+    }
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.4s ease, left 0.4s ease;
+    }
+    nav ul li a:hover {
+      color: var(--accent);
+    }
+    nav ul li a:hover::after {
+      width: 100%;
+      left: 0;
+    }
+
+    /* CONTENT CARD */
+    .content-wrapper {
+      padding: calc(var(--nav-height) + 2rem) 1rem 4rem;
+      display: flex; justify-content: center;
+    }
+    .glass-card {
+      max-width: 800px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      animation: fadeIn 0.8s ease-out;
+    }
+    .glass-card h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-light);
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    }
+    .glass-card p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      color: var(--text-light);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+            <li><a href="introduction.html">Introduction</a></li>
+            <li><a href="Abstract.html">Abstract</a></li>
+            <li><a href="Questionnaire.html">Questionnaire</a></li>
+            <li><a href="Survey.html">Survey Data</a></li>
+            <li><a href="Activity.html">Activity Log</a></li>
+            <li><a href="Pictures.html">Pictures</a></li>
+            <li><a href="Members.html">Members</a></li>
+            <li><a href="Conclusion.html">Conclusion</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="content-wrapper">
+    <div class="glass-card">
+      <h1>Introduction</h1>
+      <p>
+        The identification of shopping preferences is an essential part of everyday life. Consumers can choose between online and offline shopping based on their personal needs and priorities.
+      </p>
+      <p>
+        <strong>Offline shopping</strong> refers to purchasing products in physical stores, allowing customers to see, touch, and try items before buying. It offers direct customer service and immediate gratification.
+      </p>
+      <p>
+        <strong>Online shopping</strong> provides convenience, a wider product selection, and the freedom to shop anytime, anywhere. Both methods have unique advantages and challenges.
+      </p>
+      <p>
+        Understanding what drives consumer preference—whether it’s price, convenience, social experience, or product variety—helps businesses tailor their strategies and improve customer satisfaction.
+      </p>
+      <!-- add more as needed -->
+       <p>
+        What drives consumer preference toward one shopping mode over the other?
+
+Understanding these preferences is crucial in the modern retail landscape. Businesses, marketers, and policy makers alike benefit from insights into consumer behavior to tailor services, enhance customer satisfaction, and optimize sales strategies. Some consumers are drawn to the convenience, speed, and product variety that online platforms provide. Others continue to value the tactile, social, and experiential elements of shopping in physical stores. Factors such as age, income, education level, lifestyle, technological access, and even psychological comfort levels influence these choices. Therefore, identifying who prefers which mode of shopping—and why—is not only relevant but essential for the sustainable growth of both online and offline retail sectors.
+
+The COVID-19 pandemic further accelerated the adoption of online shopping. Lockdowns, health concerns, and movement restrictions forced many traditional
+
+shoppers to explore digital avenues for their daily needs. E-commerce platforms saw record surges in traffic and transactions during this period. However, with the return to post-pandemic normalcy, the world is witnessing a rebalancing act. Some consumers are reverting to in-person shopping, while others have permanently shifted to the digital marketplace. This shift presents a unique opportunity to analyze long-term changes in consumer behavior and preferences.
+
+Online shopping, also known as e-commerce, offers multiple advantages. It allows consumers to browse products anytime, compare prices easily, access a wider range of products, and read customer reviews before making a decision. Additionally, online platforms often provide personalized recommendations based on browsing history and prior purchases. However, challenges such as delayed deliveries, inability to physically inspect products, concerns about data security, and complex return policies can deter some shoppers.
+
+Conversely, offline shopping—whether in supermarkets, malls, or boutique stores—offers direct interaction with products, immediate gratification through on-the-spot purchases, and personalized customer service. Many consumers find offline shopping more trustworthy and secure, particularly when purchasing high-value or sensitive items such as jewelry, electronics, or luxury goods. For some, the shopping experience itself is social or recreational—a chance to spend time with friends and family or enjoy the ambiance of a physical store.
+
+Demographic factors play a significant role in shaping these preferences. For instance, younger generations who have grown up with digital technology may naturally gravitate toward online shopping due to familiarity and ease of use. Older consumers, on the other hand, may be less comfortable with digital era.
+       </p>
+       <p>
+        Geographical factors are equally important. Urban residents often have better internet connectivity and access to fast delivery services, which supports the growth of e-commerce. In contrast, rural consumers may face logistical challenges or may lack the infrastructure needed for reliable online shopping. Cultural and regional shopping habits, too, affec
+
+toward digital or traditional modes of purchase.
+
+Moreover, psychological factors like trust, perceived risk, and the desire for control can strongly impact shopping preferences. Consumers who are more skeptical about product authenticity or online scams may prefer the certainty of in-store transactions. Others might avoid crowds and lines, especially after the pandemic, leading them to favor online channels. Understanding these motivations requires a multidisciplinary approach—drawing from marketing, psychology, sociology, and economics.
+
+As technology continues to evolve, hybrid shopping models are emerging. Options like “click and collect,” augmented reality shopping, and virtual try-ons blend the convenience of online shopping with the tangibility of offline experiences. These developments add complexity to the analysis but also open up new opportunities to cater to increasingly diverse consumer needs.
+
+This study or discussion on the identification of people who prefer online shopping or offline shopping seeks to uncover these underlying preferences and the rationale behind them. By examining factors such as age, gender, occupation, education, location, and lifestyle, we can develop a clearer profile of online and offline shoppers. Such insights not only help retailers optimize their strategies but also contribute to a broader understanding of consumer behavior in the digital age.
+
+The distinction between online and offline shopping is no longer just a matter of preference—it is a reflection of how individuals interact with technology, trust systems, value convenience, and seek experiences. As the retail world becomes increasingly hybridized, identifying who prefers what—and why—remains a vital task for businesses and researchers alike.
+       </p>
+    </div>
+  </div>
+
+  <!-- SHRINK NAVBAR ON SCROLL -->
+  <script>
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        nav.style.height = '50px';
+      } else {
+        nav.style.height = 'var(--nav-height)';
+      }
+    });
+  </script>
+
+</body>
+</html>

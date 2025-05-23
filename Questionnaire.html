@@ -1,106 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questionnaire</title>
-    <link rel="stylesheet" href="ques.css"> <!-- Link to external CSS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Questionnaire</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="introduction.html">Introduction</a></li>
-            <li><a href="Abstract.html">Abstract</a></li>
-            <li><a href="Questionnaire.html">Questionnaire</a></li>
-            <li><a href="Survey.html">Survey Data</a></li>
-            <li><a href="Activity.html">Activity Log</a></li>
-            <li><a href="Pictures.html">Pictures</a></li>
-            <li><a href="Members.html">Members</a></li>
-            <li><a href="Conclusion.html">Conclusion</a></li>
-        </ul>
-    </nav>
-    </header>
-    <div class="container">
-        <h1>Questionnaire</h1>
-        <div class="container" style="max-width: 600px; margin: auto; background: #e6f7fb; padding: 30px; border-radius: 10px;">
-  <h2 style="text-align: center; color: #333;">Questionnaire</h2>
-  <p style="text-align: center;">Please take a few minutes to answer the following questions.</p>
+<body class="bg-gradient-to-r from-green-300 to-blue-400 min-h-screen font-sans">
 
-  <form>
-    <label>What is your name?</label>
-    <input type="text" placeholder="Enter your name" required />
+  <!-- Navbar -->
+  <nav class="backdrop-blur-lg bg-white/30 text-white shadow-md fixed w-full z-10">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="font-bold text-lg text-white">Laptop Survey</div>
+      <div class="space-x-6 text-white font-medium">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="introduction.html" class="hover:underline">Introduction</a>
+        <a href="abstract.html" class="hover:underline">Abstract</a>
+        <a href="questionnaire.html" class="underline">Questionnaire</a>
+        <a href="surveydata.html" class="hover:underline">Survey Data</a>
+        <a href="activitylog.html" class="hover:underline">Activity Log</a>
+        <a href="pictures.html" class="hover:underline">Pictures</a>
+        <a href="members.html" class="hover:underline">Members</a>
+        <a href="conclusion.html" class="hover:underline">Conclusion</a>
+      </div>
+    </div>
+  </nav>
 
-    <label>What is your phone number?</label>
-    <input type="tel" placeholder="Enter your phone number" required />
+  <!-- Main Content -->
+  <div class="pt-24 pb-10 flex justify-center px-4">
+    <div class="w-full max-w-2xl bg-white bg-opacity-70 backdrop-blur-md rounded-2xl p-8 shadow-xl overflow-y-auto max-h-[85vh]">
+      <h2 class="text-2xl font-bold text-center mb-4 text-gray-800">Questionnaire</h2>
+      <p class="text-center text-gray-600 mb-6">Please take a few minutes to answer the following questions.</p>
 
-    <label>What is your Aadhaar Number?</label>
-    <input type="text" placeholder="Enter your Aadhaar Number" required />
+      <form class="space-y-4">
+        <!-- Personal Info -->
+        <h3 class="text-lg font-semibold text-gray-700">Personal Information</h3>
+        <input type="text" placeholder="What is your name?" class="w-full p-2 border rounded" required />
+        <input type="tel" placeholder="What is your phone number?" class="w-full p-2 border rounded" required />
+        <input type="text" placeholder="Enter your Aadhaar Number" class="w-full p-2 border rounded" required />
 
-    <label>Which shopping are you prefer? Online or Offline?</label>
-    <select required>
-      <option value="">-- Select an option --</option>
-      <option>Online</option>
-      <option>Offline</option>
-    </select>
+        <!-- Preferences -->
+        <h3 class="text-lg font-semibold text-gray-700 pt-4">Shopping Preferences</h3>
+        <select class="w-full p-2 border rounded" required>
+          <option value="">Which shopping do you prefer? Online or Offline?</option>
+          <option>Online</option>
+          <option>Offline</option>
+        </select>
+        <input type="text" placeholder="Preferred online platforms (Amazon, Flipkart...)" class="w-full p-2 border rounded" />
+        <input type="text" placeholder="Preferred shopping plazas (e.g., Central Mall...)" class="w-full p-2 border rounded" />
 
-    <label>If you prefer online shopping, what are the online shopping platforms would you prefer?</label>
-    <input type="text" placeholder="Enter platforms like Amazon, Flipkart..." />
+        <!-- In-Store Experience -->
+        <h3 class="text-lg font-semibold text-gray-700 pt-4">In-Store Experience</h3>
+        <input type="text" placeholder="What do you enjoy most about shopping in a store?" class="w-full p-2 border rounded" />
+        <select class="w-full p-2 border rounded" required>
+          <option value="">Can you check quality better in-store?</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+        <select class="w-full p-2 border rounded" required>
+          <option value="">Do you prefer talking to sales staff before buying?</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+        <select class="w-full p-2 border rounded" required>
+          <option value="">Is it easier to find the right size in stores?</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+        <select class="w-full p-2 border rounded" required>
+          <option value="">Do you enjoy trying products before buying?</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
 
-    <label>If you prefer offline shopping, what are the shopping plazas would you prefer?</label>
-    <input type="text" placeholder="Enter shopping plazas..." />
+        <!-- Payments -->
+        <h3 class="text-lg font-semibold text-gray-700 pt-4">Payment Preferences</h3>
+        <input type="text" placeholder="How do you usually pay for online shopping? (Card, UPI, COD)" class="w-full p-2 border rounded" />
+        <input type="text" placeholder="How do you usually pay for offline shopping? (Card, UPI, Cash)" class="w-full p-2 border rounded" />
 
-    <label>What do you enjoy most about shopping in a store?</label>
-    <input type="text" placeholder="Enter your answer..." />
+        <!-- Security & Motivation -->
+        <h3 class="text-lg font-semibold text-gray-700 pt-4">Security & Motivation</h3>
+        <select class="w-full p-2 border rounded" required>
+          <option value="">Do you feel safe sharing personal/payment details online?</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+        <input type="text" placeholder="What is the biggest reason you choose to shop online?" class="w-full p-2 border rounded" />
 
-    <label>Do you feel you can check the quality better when shopping in-store?</label>
-    <select required>
-      <option value="">-- Select an option --</option>
-      <option>Yes</option>
-      <option>No</option>
-    </select>
-
-    <label>Do you prefer talking to sales staff before buying?</label>
-    <select required>
-      <option value="">-- Select an option --</option>
-      <option>Yes</option>
-      <option>No</option>
-    </select>
-
-    <label>Is it easier for you to find the right size or fit in stores?</label>
-    <select required>
-      <option value="">-- Select an option --</option>
-      <option>Yes</option>
-      <option>No</option>
-    </select>
-
-    <label>Do you enjoy trying products before buying?</label>
-    <select required>
-      <option value="">-- Select an option --</option>
-      <option>Yes</option>
-      <option>No</option>
-    </select>
-
-    <label>How do you usually pay for online shopping?</label>
-    <input type="text" placeholder="e.g., Card, UPI, Cash on Delivery" />
-
-    <label>How do you usually pay for offline shopping?</label>
-    <input type="text" placeholder="e.g., Card, UPI, Cash" />
-
-    <label>Do you feel safe sharing your personal and payment details online?</label>
-    <select required>
-      <option value="">-- Select an option --</option>
-      <option>Yes</option>
-      <option>No</option>
-    </select>
-
-    <label>What is the biggest reason you choose to shop online?</label>
-    <input type="text" placeholder="Enter your answer..." />
-
-    <br /><br />
-    <button type="submit">Submit</button>
-  </form>
-</div>
+        <button type="submit" class="w-full bg-blue-500 text-white font-semibold py-2 rounded hover:bg-blue-600 mt-4">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
